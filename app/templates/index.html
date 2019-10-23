@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block titulo %}
+Index
+{% endblock %}
+{% block contenido %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+	<a class="navbar-brand" href="#">Python</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+</nav>
+<div class="container">
+<table class="table table-hover">
+  <thead>
+    <tr style="text-align: center;">
+      <th scope="col">N°</th>
+      <th scope="col">Descripci&oacute;n</th>
+      <th scope="col">Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-info">
+      <th scope="row">1</th>
+      <td>Seleccione Fuente de Datos</td>
+      <td>
+      	<a class="btn btn-primary btn-lg" href="{{url_for('csv')}}" role="button" style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit">CSV</a>
+      	<a class="btn btn-success btn-lg" href="{{url_for('bd')}}" role="button" style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit">BD</a>
+      	<a class="btn btn-danger btn-lg" href="{{url_for('ws')}}" role="button" style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit">WS</a>
+      	
+      </td>
+    </tr>   
+  </tbody>
+</table> 
+</div>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block titulo %}
+Fuente de Datos CSV
+{% endblock %}
+{% block contenido %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+	<a class="navbar-brand" href="{{url_for('index')}}">Python</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+</nav>
+<div class="container">
+<table class="table table-hover">
+  <thead>
+  	<tr>
+      <th scope="col" colspan="3" style="text-align: center;"><h2>CSV</h2></th>
+      
+    </tr>
+    <tr style="text-align: center;">
+      <th scope="col">N°</th>
+      <th scope="col">Descripci&oacute;n</th>
+      <th scope="col">Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-info">
+      <th scope="row">1</th>
+      <td>Seleccionar Tipo de Gr&aacute;fico</td>
+      <td>
+      	<a class="btn btn-primary btn-lg" href="{{url_for('lineal')}}" role="button" style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit">Lineal</a>
+      	<a class="btn btn-success btn-lg" href="{{url_for('columnas')}}" role="button" style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit">Columnas</a>
+      	<a class="btn btn-danger btn-lg" href="{{url_for('barras')}}" role="button" style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit">Barras</a>
+      	<a class="btn btn-warning btn-lg" href="{{url_for('puntos')}}" role="button" style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit">Puntos</a>
+      	<a class="btn btn-secondary btn-lg" href="{{url_for('circular')}}" role="button" style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit">Circular</a>
+      </td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">2</th>
+      <td>Seleccionar Limpieza de Datos</td>
+      <td>
+      	<button type="button" class="btn btn-primary">Limpieza N°1</button>
+      	<button type="button" class="btn btn-success">Limpieza N°2</button>
+      	<button type="button" class="btn btn-danger">Limpieza N°3</button>
+      	<button type="button" class="btn btn-warning">Limpieza N°4</button>
+      	<button type="button" class="btn btn-secondary">Limpieza N°5</button>
+      </td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">3</th>
+      <td>Seleccionar Consultas de Informaci&oacute;n</td>
+      <td>
+        <a class="btn btn-primary btn-lg" href="{{url_for('consulta_uno')}}" role="button" style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit">Consulta N°1</a>
+        <a class="btn btn-success btn-lg" href="{{url_for('consulta_dos')}}" role="button" style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit">Consulta N°2</a>
+        <a class="btn btn-danger btn-lg" href="{{url_for('consulta_tres')}}" role="button" style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit">Consulta N°3</a>
+        <a class="btn btn-warning btn-lg" href="{{url_for('consulta_cuatro')}}" role="button" style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit">Consulta N°4</a>
+        <a class="btn btn-secondary btn-lg" href="{{url_for('consulta_cinco')}}" role="button" style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit">Consulta N°5</a>
+      </td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">4</th>
+      <td>Exportar</td>
+      <td>
+      	<button type="button" class="btn btn-primary">Exportar</button>
+      </td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">5</th>
+      <td>Consulta</td>
+      <td>
+      	<input type="text" name="" placeholder="Consulta" class="form-control">
+      </td>
+    </tr>    
+  </tbody>
+</table> 
+</div>
+{% endblock %}
